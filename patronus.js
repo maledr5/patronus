@@ -1,70 +1,80 @@
-$( document ).ready(function(){
-	var FUERZA ='fuerza'
-	var TRABAJODURO ='trabajo duro'
-	var AVENTURA ='aventura'
-	var AMABILIDAD  ='amabilidad '
-	var SABIDURIA ='sabiduría'
-	var ASTUCIA ='astucia'
-	var AMBICION ='ambición'
-	var DETERMINACION ='determinación'
-	var JUSTICIA ='justicia'
-	var EQUIDAD ='equidad'
-	var AMISTAD ='amistad'
-	var VALOR ='valor'
-	var INSTINTODECONSERVACION ='instinto de conservación'
-	var DEDICACION ='dedicación'
-	var CREATIVIDAD ='creatividad'
-	var FIDELIDAD ='fidelidad'
-	var INTELIGENCIA ='inteligencia'
-	var TOLERANCIA ='tolerancia'
-	var CORRER ='correr'
-	var SALTAR ='saltar'
-	var OBSERVAR ='observar'
-	var COMER ='comer'
-	var HABLAR ='hablar'
-	var PENSAR ='pensar'
-	var ESCUCHAR ='escuchar'
-	var LEER ='leer'
-	var JUGAR ='jugar'
-	var BOSQUE ='bosque'
-	var MAR ='mar'
-	var MONTAÑAS ='montañas'
-	var DESIERTO ='desierto'
+$(document).ready(function(){
 
-	var animales = ['oso de anteojos', 'ocelote', 'condor', 'llama', 'venado', 'capybara', 'buho', 'serpiente']	
+    var $container = $(".container");
 
-	treats = {}
-	treats[FUERZA] = ['oso de anteojos', 'ocelote']
-	treats[TRABAJODURO] = ['condor', 'llama']
-	treats[AVENTURA] = ['venado', 'capybara']
-	treats[AMABILIDAD ] = ['llama', 'capybara']
-	treats[SABIDURIA] = ['buho', 'condor']
-	treats[ASTUCIA] = ['serpiente', 'ocelote']
-	treats[AMBICION] = ['serpiente', 'ocelote']
-	treats[DETERMINACION] = ['llama', 'buho']
-	treats[JUSTICIA] = ['oso de anteojos', 'condor']
-	treats[EQUIDAD] = ['capybara', 'buho']
-	treats[AMISTAD] = ['oso de anteojos', 'venado']
-	treats[VALOR] = ['ocelote', 'serpiente']
-	treats[INSTINTODECONSERVACION] = ['Capybara', 'serpiente']
-	treats[DEDICACION] = ['buho', 'condor']
-	treats[CREATIVIDAD] = ['venado', 'oso de anteojos']
-	treats[FIDELIDAD] = ['oso de anteojos', 'llama']
-	treats[INTELIGENCIA] = ['serpiente', 'buho']
-	treats[TOLERANCIA] = ['capybara', 'ocelote']
-	treats[CORRER] = ['ocelote', 'llama']
-	treats[SALTAR] = ['venado', 'oso de anteojos']
-	treats[OBSERVAR] = ['buho', 'condor']
-	treats[COMER] = ['capybara', 'llama']
-	treats[HABLAR] = ['ocelote', 'venado']
-	treats[PENSAR] = ['buho', 'condor']
-	treats[ESCUCHAR] = ['oso de anteojos', 'llama']
-	treats[LEER] = ['serpiente', 'condor']
-	treats[JUGAR] = ['venado', 'capybara']
-	treats[BOSQUE] = ['oso de anteojos', 'capybara']
-	treats[MAR] = ['ocelote', 'buho']
-	treats[MONTAÑAS] = ['llama', 'condor']
-	treats[DESIERTO] = ['serpiente', 'venado']
+	var FUERZA ='fuerza';
+	var TRABAJODURO ='trabajo duro';
+	var AVENTURA ='aventura';
+	var AMABILIDAD  ='amabilidad ';
+	var SABIDURIA ='sabiduría';
+	var ASTUCIA ='astucia';
+	var AMBICION ='ambición';
+	var DETERMINACION ='determinación';
+	var JUSTICIA ='justicia';
+	var EQUIDAD ='equidad';
+	var AMISTAD ='amistad';
+	var VALOR ='valor';
+	var INSTINTODECONSERVACION ='instinto de conservación';
+	var DEDICACION ='dedicación';
+	var CREATIVIDAD ='creatividad';
+	var FIDELIDAD ='fidelidad';
+	var INTELIGENCIA ='inteligencia';
+	var TOLERANCIA ='tolerancia';
+	var CORRER ='correr';
+	var SALTAR ='saltar';
+	var OBSERVAR ='observar';
+	var COMER ='comer';
+	var HABLAR ='hablar';
+	var PENSAR ='pensar';
+	var ESCUCHAR ='escuchar';
+	var LEER ='leer';
+	var JUGAR ='jugar';
+	var BOSQUE ='bosque';
+	var MAR ='mar';
+	var MONTANAS ='montañas';
+	var DESIERTO ='desierto';
+
+    var OSO = 'oso de anteojos';
+    var OCELOTE = 'ocelote';
+    var CONDOR = 'condor';
+    var LLAMA = 'llama';
+    var VENADO = 'venado';
+    var CAPYBARA = 'capybara';
+    var BUHO = 'buho';
+    var SERPIENTE = 'serpiente';
+
+	treats = {};
+    treats[FUERZA] = [OSO, OCELOTE];
+    treats[TRABAJODURO] = [CONDOR, LLAMA];
+    treats[AVENTURA] = [VENADO, CAPYBARA];
+    treats[AMABILIDAD ] = [LLAMA, CAPYBARA];
+    treats[SABIDURIA] = [BUHO, CONDOR];
+    treats[ASTUCIA] = [SERPIENTE, OCELOTE];
+	treats[AMBICION] = [SERPIENTE, OCELOTE];
+	treats[DETERMINACION] = [LLAMA, BUHO];
+	treats[JUSTICIA] = [OSO, CONDOR];
+	treats[EQUIDAD] = [CAPYBARA, BUHO];
+	treats[AMISTAD] = [OSO, VENADO];
+	treats[VALOR] = [OCELOTE, SERPIENTE];
+	treats[INSTINTODECONSERVACION] = [CAPYBARA, SERPIENTE];
+	treats[DEDICACION] = [BUHO, CONDOR];
+	treats[CREATIVIDAD] = [VENADO, OSO];
+	treats[FIDELIDAD] = [OSO, LLAMA];
+	treats[INTELIGENCIA] = [SERPIENTE, BUHO];
+	treats[TOLERANCIA] = [CAPYBARA, OCELOTE];
+	treats[CORRER] = [OCELOTE, LLAMA];
+	treats[SALTAR] = [VENADO, OSO];
+	treats[OBSERVAR] = [BUHO, CONDOR];
+	treats[COMER] = [CAPYBARA, LLAMA];
+	treats[HABLAR] = [OCELOTE, VENADO];
+	treats[PENSAR] = [BUHO, CONDOR];
+	treats[ESCUCHAR] = [OSO, LLAMA];
+	treats[LEER] = [SERPIENTE, CONDOR];
+	treats[JUGAR] = [VENADO, CAPYBARA];
+	treats[BOSQUE] = [OSO, CAPYBARA];
+	treats[MAR] = [OCELOTE, BUHO];
+	treats[MONTANAS] = [LLAMA, CONDOR];
+	treats[DESIERTO] = [SERPIENTE, VENADO];
 
 	preguntas = [
 		[FUERZA, TRABAJODURO, AVENTURA],
@@ -77,11 +87,11 @@ $( document ).ready(function(){
 		[COMER, HABLAR, PENSAR],
 		[ESCUCHAR, LEER, JUGAR],
 		[BOSQUE, MAR],
-		[MONTAÑAS, DESIERTO]
-	]
+		[MONTANAS, DESIERTO]
+	];
 
 	var cantidadesDisponibles = {};
-	
+
 	function totalDisponibilidad(){
 		var total = 0;
 		for (key in cantidadesDisponibles) {
@@ -100,38 +110,37 @@ $( document ).ready(function(){
 			'capybara': 3,
 			'buho': 3,
 			'serpiente': 3
-		}
+		};
 		updateDataStorage();
 	} else {
 		readDataStorage();
 	}
 
 	var index = 0;
-	
+
 	mostrarPregunta(index);
 
 	function mostrarPregunta(index){
 		preguntas[index].forEach(function(pregunta){
-			$('body').append("<a id='" + pregunta + "'>" + pregunta + "</a><br/>")
-		});	
-	}	
-	
-	function quitarPregunta(index) {
-		$('a').remove();
-		$('br').remove();
+			$container.append("<div data-treat='" + pregunta + "' class='pregunta font-school'>" + pregunta + "</div>")
+		});
+	}
+
+	function quitarPregunta() {
+		$('.pregunta').remove();
 	}
 
 	var seleccionados = [];
 	function asignarResultados(selected) {
 		seleccionados = seleccionados.concat(treats[selected])
-	}
+    }
 
-	$(document).on('click', 'a', function(clicked){
-		var selected = $(clicked.target).html();
+	$(document).on('click', '.pregunta', function(){
+		var selected = $(this).data("treat");
 	    quitarPregunta();
 	    index ++;
 	    if (index < preguntas.length){
-	    	asignarResultados(selected)
+	    	asignarResultados(selected);
 	    	mostrarPregunta(index);
 	    } else {
 	    	mostrarResultado(calcularResultado());
@@ -139,7 +148,7 @@ $( document ).ready(function(){
 	    }
 	});
 
-	var resultado = {}
+	var resultado = {};
 	function calcularResultado(){
 		seleccionados.forEach(function(seleccion){
 			count = resultado[seleccion];
@@ -156,14 +165,15 @@ $( document ).ready(function(){
 		for (key in resultado) {
 			tmp.push({'descripcion': key, 'count': resultado[key]});
 		}
-		return tmp.sort(function(a,b){return b.count - a.count});
-	}	
+        var sort = tmp.sort(function(a, b){return b.count - a.count});
+        return sort;
+	}
 
 	function buscarDisponibilidad(resultado) {
 		var animalDisponible;
 		for(var i=0; i<resultado.length; i+1){
-			descripcion = resultado[i].descripcion
-			disponibilidad = cantidadesDisponibles[descripcion]
+			descripcion = resultado[i].descripcion;
+			disponibilidad = cantidadesDisponibles[descripcion];
 			if (disponibilidad > 0){
 				animalDisponible = descripcion;
 				cantidadesDisponibles[descripcion] = disponibilidad - 1;
@@ -174,7 +184,7 @@ $( document ).ready(function(){
 	}
 
 	function mostrarResultado(ganador) {
-		$('body').append("<div id='resultado'>" + ganador + "</div><br/>")
+		$container.append("<div id='resultado'>" + ganador + "</div><br/>")
 	}
 
 	function updateDataStorage() {

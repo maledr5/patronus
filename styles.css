@@ -1,0 +1,55 @@
+.font-shadows {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.font-coming {
+    font-family: 'Coming Soon', cursive;
+}
+
+.font-bad {
+    font-family: 'Bad Script', cursive;
+}
+
+.font-patrick {
+    font-family: 'Patrick Hand', cursive;
+}
+
+.font-handlee {
+    font-family: 'Handlee', cursive;
+}
+
+.font-neucha {
+    font-family: 'Neucha', cursive;
+}
+
+.font-school {
+    font-family: 'Schoolbell', cursive;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.container {
+    background: #000;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.pregunta {
+    background: mediumpurple;
+    margin: 10px;
+    flex: 0 0 30%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#resultado {
+    background: rebeccapurple;
+    margin: 10px;
+    flex: 0 0 50%;
+    padding: 20px;
+}
