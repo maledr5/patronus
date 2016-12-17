@@ -122,7 +122,7 @@ $(document).ready(function(){
 
 	function mostrarPregunta(index){
 		preguntas[index].forEach(function(pregunta){
-			$container.append("<div data-treat='" + pregunta + "' class='pregunta font-school'>" + pregunta + "</div>")
+			$container.append("<div data-treat='" + pregunta + "' class='pregunta'>" + pregunta + "</div>")
 		});
 	}
 
@@ -171,14 +171,14 @@ $(document).ready(function(){
 
 	function buscarDisponibilidad(resultado) {
 		var animalDisponible;
-		for(var i=0; i<resultado.length; i+1){
+		for(var i=0; i<resultado.length; i=i+1){
 			descripcion = resultado[i].descripcion;
 			disponibilidad = cantidadesDisponibles[descripcion];
 			if (disponibilidad > 0){
 				animalDisponible = descripcion;
 				cantidadesDisponibles[descripcion] = disponibilidad - 1;
 				break;
-			}
+			} 
 		}
 		return animalDisponible;
 	}
@@ -193,6 +193,6 @@ $(document).ready(function(){
 	}
 
 	function readDataStorage() {
-		cantidadesDisponibles = JSON.parse(localStorage.getItem('cantidadesDisponibles'))
+		cantidadesDisponibles = JSON.parse(localStorage.getItem('cantidadesDisponibles'));
 	}
 })
